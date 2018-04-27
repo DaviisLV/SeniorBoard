@@ -30,8 +30,8 @@ public class BoardPlacment : MonoBehaviour {
 
     private void ShowControllerPoz()
     {
-        Debug.Log("Right move"+ ControllerRight.transform.position);
-        Debug.Log("Left move"+ ControllerLeft.transform.position);
+        Debug.Log("Right X = "+ ControllerRight.transform.position.x+ "Right Z = " + ControllerRight.transform.position.z);
+        Debug.Log("Left X = " + ControllerLeft.transform.position.x + "Left Z = " + ControllerLeft.transform.position.z);
     }
 
 }

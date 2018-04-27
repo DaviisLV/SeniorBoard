@@ -26,10 +26,6 @@ public class BoardPlacment : MonoBehaviour {
     private void SetBoardPosition()
     {
        Board.transform.position = ControllerLeft.transform.position + (ControllerRight.transform.position - ControllerLeft.transform.position) / 2;
-
-        Debug.Log(ControllerRight.transform.position);
-        Debug.Log(ControllerLeft.transform.position);
-        Debug.Log(Board.transform.position);
     }
 
     private void ShowControllerPoz()

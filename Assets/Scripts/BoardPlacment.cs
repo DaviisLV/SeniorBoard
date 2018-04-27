@@ -9,13 +9,13 @@ public class BoardPlacment : MonoBehaviour {
     public GameObject ControllerRight;
 
 	void Start () {
-        SetBoardPosition();
+       
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
+		 SetBoardPosition();
 	}
 
     private void FixedUpdate()

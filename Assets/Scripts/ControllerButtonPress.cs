@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControllerButtonPress : MonoBehaviour {
 
-    private const Valve.VR.EVRButtonId Pad = Valve.VR.EVRButtonId.k_EButton_DPad_Down;
+    private const Valve.VR.EVRButtonId menu = Valve.VR.EVRButtonId.k_EButton_ApplicationMenu;
 
     private SteamVR_TrackedObject _trackedObj;
     private SteamVR_Controller.Device Controller { get { return SteamVR_Controller.Input((int)_trackedObj.index); } }
@@ -23,7 +23,7 @@ public class ControllerButtonPress : MonoBehaviour {
             return;
         }
 
-        if (Controller.GetPressDown(Pad))
+        if (Controller.GetPressDown(menu))
         {
             Debug.Log("pressed tachpad");
             BoardPlacment bp = new BoardPlacment();

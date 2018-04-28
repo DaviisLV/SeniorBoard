@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 98967808}
   - component: {fileID: 98967810}
   - component: {fileID: 98967809}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 161999555}
   - component: {fileID: 161999557}
   - component: {fileID: 161999556}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1691,7 +1691,7 @@ GameObject:
   - component: {fileID: 534644311}
   - component: {fileID: 534644310}
   - component: {fileID: 534644309}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2015,7 +2015,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 604045654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_end 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3741,7 +3741,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 969936732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3774,7 +3774,7 @@ GameObject:
   - component: {fileID: 976441199}
   - component: {fileID: 976441198}
   - component: {fileID: 976441197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Get redy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4640,7 +4640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1098736416}
   - component: {fileID: 1098736417}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Area.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4761,7 +4761,7 @@ GameObject:
   - component: {fileID: 1161131731}
   - component: {fileID: 1161131729}
   - component: {fileID: 1161131732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: test_car4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5731,7 +5731,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1346595742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6033,7 +6033,7 @@ GameObject:
   - component: {fileID: 1481217006}
   - component: {fileID: 1481217005}
   - component: {fileID: 1481217004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hit Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6548,7 +6548,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1687574707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Armature.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6647,7 +6647,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1719954550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7178,7 +7178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1834670541}
   - component: {fileID: 1834670542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Area.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7313,7 +7313,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1867880908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7345,7 +7345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1917300015}
   - component: {fileID: 1917300016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}

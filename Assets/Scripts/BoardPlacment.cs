@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class BoardPlacment : MonoBehaviour
 {
-    public GameObject Box;
-    public GameObject Tabel;
-    public GameObject Board;
+    public GameObject Car;
     public GameObject ControllerLeft;
     public GameObject ControllerRight;
     public GameObject Head;
@@ -27,9 +25,9 @@ public class BoardPlacment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-           SetBoardPosition();
-      //  SetBoxPoz();
-        Board.transform.position += corentPoz;
+        SetMidlePos();
+
+        Car.transform.position += corentPoz;
         lastPoz = corentPoz;
     }
 
@@ -40,9 +38,9 @@ public class BoardPlacment : MonoBehaviour
   
     }
 
-   
 
-    private void SetBoardPosition()
+
+    private void SetMidlePos()
     {
 
         float pozX = ControllerLeft.transform.position.x + (ControllerRight.transform.position.x - ControllerLeft.transform.position.x) / 2;
@@ -54,18 +52,13 @@ public class BoardPlacment : MonoBehaviour
 
     }
 
-    private void SetBoxPoz()
-    {
-
-        Box.transform.position = new Vector3(Board.transform.position.x,_headStartPoz.y-BoxOffset, Board.transform.position.z+0.4f);  
-
-    }
+  
     public void GetHeadPosition()
     {
        
         _headStartPoz = Head.transform.position;
         lastPoz = MidlePoint;
-        Board.transform.position = MidlePoint;
+       // Board.transform.position = MidlePoint;
      
     }
   

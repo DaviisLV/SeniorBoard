@@ -17,6 +17,6 @@ public CheckCollisions cc;
     // Update is called once per frame
     void Update()
     {
-     //   text.text = cc.GetHitCount();
+      text.text = cc.GetHitCount();
     }
 }

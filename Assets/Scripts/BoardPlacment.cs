@@ -45,7 +45,7 @@ public class BoardPlacment : MonoBehaviour
     public void GetHeadPosition()
     {
         path.SetActive(true);
-        path.transform.position = new Vector3(path.transform.position.x, _headStartPoz.y + carpozOffset, path.transform.position.y);
+        path.transform.position = new Vector3(path.transform.position.x, _headStartPoz.y + carpozOffset, path.transform.position.z);
         _headStartPoz = Head.transform.position;
         ready = true;
 

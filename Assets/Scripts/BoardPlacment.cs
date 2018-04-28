@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class BoardPlacment : MonoBehaviour
 {
-
+    public GameObject coin;
     public GameObject Board;
     public GameObject ControllerLeft;
     public GameObject ControllerRight;
 
     void Start()
     {
-
+        coin.transform.position = new Vector3(coin.transform.position.x, ControllerRight.transform.position.y, coin.transform.position.z);
 
     }
 

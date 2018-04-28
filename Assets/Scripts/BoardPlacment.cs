@@ -11,19 +11,19 @@ public class BoardPlacment : MonoBehaviour
 
     void Start()
     {
-       
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
- SetBoardPosition();
+       // SetBoardPosition();
     }
 
     private void FixedUpdate()
     {
-        ShowControllerPoz();
+        //   ShowControllerPoz();
     }
 
     private void SetBoardPosition()

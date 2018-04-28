@@ -26,6 +26,8 @@ public class ControllerButtonPress : MonoBehaviour {
         if (Controller.GetPressDown(Pad))
         {
             Debug.Log("pressed tachpad");
+            BoardPlacment bp = new BoardPlacment();
+            bp.GetHeadPosition();
 
         }
 

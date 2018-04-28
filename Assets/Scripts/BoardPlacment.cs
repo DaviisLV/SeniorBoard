@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BoardPlacment : MonoBehaviour
 {
@@ -10,14 +11,20 @@ public class BoardPlacment : MonoBehaviour
     public GameObject ControllerRight;
     public GameObject Head;
 
+    public Text GetReadyText;
+
+
     private Vector3 _headStartPoz;
     public int PowerOfMove = 5;
     public float BoxOffset = 0.9f;
     public float carpozOffset = -0.4f;
     public float pathOffset = 0;
     bool ready = false;
+
+
     void Start()
     {
+      
 
 
     }
@@ -26,8 +33,8 @@ public class BoardPlacment : MonoBehaviour
     void Update()
     {
         if (ready)
-        SetBoardPosition();
- 
+            SetBoardPosition();
+
     }
 
 
@@ -39,20 +46,31 @@ public class BoardPlacment : MonoBehaviour
         float pozZ = ControllerLeft.transform.position.z + (ControllerRight.transform.position.z - ControllerLeft.transform.position.z) / 2;
         float pozY = _headStartPoz.y + carpozOffset;
 
-        Car.transform.position = new Vector3(pozX*PowerOfMove, pozY, pozZ);
+        Car.transform.position = new Vector3(pozX * PowerOfMove, pozY, pozZ);
     }
 
-    
+
     public void GetHeadPosition()
     {
         Car.SetActive(true);
         path.SetActive(true);
         _headStartPoz = Head.transform.position;
         path.transform.position = new Vector3(path.transform.position.x, _headStartPoz.y + pathOffset, path.transform.position.z);
-       
-        ready = true;
+        StartCoroutine("getReady");
 
     }
-  
+    IEnumerator getReady()
+    {
+        GetReadyText.text = "3";
+         yield return new WaitForSeconds(1);
+        GetReadyText.text = "2";
+        yield return new WaitForSeconds(1);
+        GetReadyText.text = "1";
+        yield return new WaitForSeconds(1);
+      
+        ready = true;
+    }
+
+
 
 }

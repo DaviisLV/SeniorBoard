@@ -14,6 +14,7 @@ public class BoardPlacment : MonoBehaviour
     public int PowerOfMove = 5;
     public float BoxOffset = 0.9f;
     public float carpozOffset = -0.4f;
+    public float pathOffset = 0;
     bool ready = false;
     void Start()
     {
@@ -45,7 +46,7 @@ public class BoardPlacment : MonoBehaviour
     public void GetHeadPosition()
     {
         path.SetActive(true);
-        path.transform.position = new Vector3(path.transform.position.x, _headStartPoz.y + carpozOffset, path.transform.position.z);
+        path.transform.position = new Vector3(path.transform.position.x, _headStartPoz.y + pathOffset, path.transform.position.z);
         _headStartPoz = Head.transform.position;
         ready = true;
 

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DropObjects : MonoBehaviour {
+public class RoudLine : MonoBehaviour {
 
-    public GameObject ob;
+    public GameObject line;
     public Transform startPos;
     private Transform dropPoz;
 	
@@ -21,7 +21,7 @@ public class DropObjects : MonoBehaviour {
 
    public void CreateObjects()
     {
-        GameObject newBut = Instantiate(ob, startPos.position, transform.rotation) as GameObject;
+        GameObject newBut = Instantiate(line) as GameObject;
 
 
     }

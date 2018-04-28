@@ -9,20 +9,13 @@ public class GenereitObjects : MonoBehaviour {
     Vector3 poz;
     // Use this for initialization
 
-    private void Awake()
-    {
-        for (int i = 0; i < path.Length; i++)
-        {
-            path[i].y = startPos.position.y;
-            path[i].x = startPos.position.x;
-        }
-    }
+ 
     void Start () {
 
         poz = startPos.position;
 
         //  InvokeRepeating("Go", 2, 2);
-        Go();
+       // Go();
     }
 	
 	// Update is called once per frame

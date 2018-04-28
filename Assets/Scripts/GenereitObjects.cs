@@ -6,9 +6,14 @@ public class GenereitObjects : MonoBehaviour {
 
     public GameObject ob;
     public Transform startPos;
+    Vector3 poz;
 	// Use this for initialization
 	void Start () {
+
+        poz = startPos.position;
+
         InvokeRepeating("Go", 2, 2);
+
     }
 	
 	// Update is called once per frame
@@ -18,7 +23,7 @@ public class GenereitObjects : MonoBehaviour {
 
     public void Go()
     {
-        GameObject newBut = Instantiate(ob, startPos.position, transform.rotation) as GameObject;
+        GameObject newBut = Instantiate(ob, poz, transform.rotation) as GameObject;
 
 
     }

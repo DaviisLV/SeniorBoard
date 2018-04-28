@@ -8,7 +8,7 @@ public class CheckCollisions : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-
+        Debug.Log("HIT");
         if (other.gameObject.tag == "Coin")
         {
             _hitCount++;

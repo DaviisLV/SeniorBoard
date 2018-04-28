@@ -23,6 +23,6 @@ public class CheckCollisions : MonoBehaviour {
 
     public string GetHitCount()
     {
-        return "Trāpijumi: "+_hitCount.ToString();
+        return "Punkti: "+_hitCount.ToString();
     }
 }

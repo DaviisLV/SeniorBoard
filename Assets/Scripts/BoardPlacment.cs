@@ -30,6 +30,7 @@ public class BoardPlacment : MonoBehaviour
         
       //  SetBoxPoz();
         Board.transform.position += corentPoz;
+        lastPoz = corentPoz;
     }
 
     private void LateUpdate()

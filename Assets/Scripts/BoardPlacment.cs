@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoardPlacment : MonoBehaviour
 {
     public GameObject Box;
-        
+    public GameObject Tabel;
     public GameObject Board;
     public GameObject ControllerLeft;
     public GameObject ControllerRight;
@@ -27,7 +27,10 @@ public class BoardPlacment : MonoBehaviour
     }
 
 
-
+    private void SetTabelPosition()
+    {
+        Tabel.transform.position = new Vector3();
+    }
 
     private void SetBoardPosition()
     {
@@ -42,7 +45,7 @@ public class BoardPlacment : MonoBehaviour
     private void SetBoxPoz()
     {
 
-        Box.transform.position = new Vector3(Board.transform.position.x,_headStartPoz.y, Board.transform.position.z+1);  
+        Box.transform.position = new Vector3(Board.transform.position.x,_headStartPoz.y-2, Board.transform.position.z+1);  
 
     }
     public void GetHeadPosition()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ControllerButtonPress : MonoBehaviour {
-
+    public BoardPlacment bp;
     private const Valve.VR.EVRButtonId menu = Valve.VR.EVRButtonId.k_EButton_ApplicationMenu;
 
     private SteamVR_TrackedObject _trackedObj;
@@ -26,7 +26,6 @@ public class ControllerButtonPress : MonoBehaviour {
         if (Controller.GetPressDown(menu))
         {
             Debug.Log("pressed tachpad");
-            BoardPlacment bp = new BoardPlacment();
             bp.GetHeadPosition();
 
         }

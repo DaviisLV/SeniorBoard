@@ -22,20 +22,21 @@ public class BoardPlacment : MonoBehaviour
     void Start()
     {
         lastPoz = MidlePoint;
-
+        Board.transform.position = MidlePoint;
     }
 
     // Update is called once per frame
     void Update()
     {
-        SetBoardPosition();
+        
         SetBoxPoz();
+        Board.transform.position += corentPoz;
     }
 
     private void LateUpdate()
     {
         corentPoz = MidlePoint - lastPoz;
-        Board.transform.position = Vector3.Lerp(lastPoz, corentPoz, 1);
+      
         lastPoz = corentPoz;
         
     }
@@ -51,6 +52,7 @@ public class BoardPlacment : MonoBehaviour
         float pozX = ControllerLeft.transform.position.x + (ControllerRight.transform.position.x - ControllerLeft.transform.position.x) / 2;
         float pozZ = ControllerLeft.transform.position.z + (ControllerRight.transform.position.z - ControllerLeft.transform.position.z) / 2;
         float pozY = ControllerLeft.transform.position.y;
+
         MidlePoint = new Vector3(pozX, pozY, pozZ);
        
     }
@@ -63,7 +65,9 @@ public class BoardPlacment : MonoBehaviour
     }
     public void GetHeadPosition()
     {
+       
         _headStartPoz = Head.transform.position;
+        SetBoardPosition();
     }
   
 

@@ -8,7 +8,7 @@ using UnityEditor;
 public class GenEditor : Editor
 {
     private GenereitObjects go;
-
+    
 
     private void OnEnable()
     {
@@ -28,7 +28,7 @@ public class GenEditor : Editor
         for (int i = 0; i < go.path.Length; i++)
         {
             go.path[i].y = go.startPos.position.y;
-           go.path[i].x = go.startPos.position.x;
+           go.path[i].x = go.startPos.position.x+go.offset;
         }
 
        

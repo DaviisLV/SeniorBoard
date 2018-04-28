@@ -7,9 +7,11 @@ public class GenereitObjects : MonoBehaviour {
     public GameObject ob;
     public Transform startPos;
     Vector3 poz;
+
+    public float offset = 0.1f;
     // Use this for initialization
 
- 
+
     void Start () {
 
         poz = startPos.position;
@@ -23,15 +25,5 @@ public class GenereitObjects : MonoBehaviour {
      
 	}
 
-    public void Go()
-    {
-        for (int i = 0; i < path.Length; i++)
-        {
-            GameObject newBut = Instantiate(ob, path[i], transform.rotation) as GameObject;
-            newBut.transform.parent = startPos;
-            newBut.transform.position = path[i];
-            Debug.Log(newBut.transform.position);
-        }
-
-    }
+    
 }

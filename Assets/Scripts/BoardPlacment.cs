@@ -12,6 +12,7 @@ public class BoardPlacment : MonoBehaviour
     public GameObject Head;
     public GameObject Info;
     public Text GetReadyText;
+    public GameObject Roud;
 
 
     private Vector3 _headStartPoz;
@@ -64,13 +65,14 @@ public class BoardPlacment : MonoBehaviour
     IEnumerator getReady()
     {
         GetReadyText.text = "3";
-         yield return new WaitForSeconds(1);
+         yield return new WaitForSeconds(1.5f);
         GetReadyText.text = "2";
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
         GetReadyText.text = "1";
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
         GetReadyText.text = "";
         path.SetActive(true);
+        Roud.SetActive(true);
         
     }
 

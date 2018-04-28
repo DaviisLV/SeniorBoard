@@ -15,9 +15,13 @@ public class BoardPlacment : MonoBehaviour
     public int PowerOfMove = 5;
     public float BoxOffset = 0.9f;
 
+    Vector3 corentPoz,lastPoz;
+
+    Vector3 MidlePoint;
+
     void Start()
     {
-
+        lastPoz = MidlePoint;
 
     }
 
@@ -28,6 +32,13 @@ public class BoardPlacment : MonoBehaviour
         SetBoxPoz();
     }
 
+    private void LateUpdate()
+    {
+        corentPoz = MidlePoint - lastPoz;
+        Board.transform.position = Vector3.Lerp(lastPoz, corentPoz, 1);
+        lastPoz = corentPoz;
+        
+    }
 
     private void SetTabelPosition()
     {
@@ -40,8 +51,8 @@ public class BoardPlacment : MonoBehaviour
         float pozX = ControllerLeft.transform.position.x + (ControllerRight.transform.position.x - ControllerLeft.transform.position.x) / 2;
         float pozZ = ControllerLeft.transform.position.z + (ControllerRight.transform.position.z - ControllerLeft.transform.position.z) / 2;
         float pozY = ControllerLeft.transform.position.y;
-
-        Board.transform.position = new Vector3(pozX*PowerOfMove, pozY, pozZ);
+        MidlePoint = new Vector3(pozX, pozY, pozZ);
+       
     }
 
     private void SetBoxPoz()

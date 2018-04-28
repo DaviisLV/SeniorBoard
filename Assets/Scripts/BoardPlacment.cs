@@ -27,7 +27,7 @@ public class BoardPlacment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+           SetBoardPosition();
       //  SetBoxPoz();
         Board.transform.position += corentPoz;
         lastPoz = corentPoz;
@@ -50,8 +50,7 @@ public class BoardPlacment : MonoBehaviour
         float pozY = ControllerLeft.transform.position.y;
 
         MidlePoint = new Vector3(pozX, pozY, pozZ);
-        lastPoz = MidlePoint;
-        Board.transform.position = MidlePoint;
+        
 
     }
 
@@ -65,7 +64,9 @@ public class BoardPlacment : MonoBehaviour
     {
        
         _headStartPoz = Head.transform.position;
-        SetBoardPosition();
+        lastPoz = MidlePoint;
+        Board.transform.position = MidlePoint;
+     
     }
   
 

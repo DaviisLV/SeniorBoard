@@ -12,7 +12,9 @@ public class CheckCollisions : MonoBehaviour {
         if (other.gameObject.tag == "Coin")
         {
             _hitCount++;
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<MoveObject>().stop();
+            Destroy(other.gameObject,0.7f);
+
             Debug.Log(_hitCount);
 
         }

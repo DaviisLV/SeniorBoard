@@ -12,7 +12,8 @@ public class BoardPlacment : MonoBehaviour
     public GameObject Head;
 
     private Vector3 _headStartPoz;
-
+    public int PowerOfMove = 5;
+    public float BoxOffset = 0.9f;
     void Start()
     {
 
@@ -39,13 +40,13 @@ public class BoardPlacment : MonoBehaviour
         float pozZ = ControllerLeft.transform.position.z + (ControllerRight.transform.position.z - ControllerLeft.transform.position.z) / 2;
         float pozY = ControllerLeft.transform.position.y;
 
-        Board.transform.position = new Vector3(pozX*5, pozY, pozZ);
+        Board.transform.position = new Vector3(pozX*PowerOfMove, pozY, pozZ);
     }
 
     private void SetBoxPoz()
     {
 
-        Box.transform.position = new Vector3(Board.transform.position.x,_headStartPoz.y-0.5f, Board.transform.position.z+1);  
+        Box.transform.position = new Vector3(Board.transform.position.x,_headStartPoz.y-BoxOffset, Board.transform.position.z+1);  
 
     }
     public void GetHeadPosition()

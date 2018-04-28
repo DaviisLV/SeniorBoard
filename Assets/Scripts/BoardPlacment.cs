@@ -23,7 +23,7 @@ public class BoardPlacment : MonoBehaviour
     void Update()
     {
         SetBoardPosition();
- ;
+ 
     }
 
 

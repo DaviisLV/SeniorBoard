@@ -34,7 +34,7 @@ public class GenEditor : Editor
        
             for (int i = 0; i < go.path.Length; i++)
             {
-                GameObject newBut = Instantiate(go.ob, go.path[i], go.transform.rotation) as GameObject;
+                GameObject newBut = Instantiate(go.ob, go.path[i],Quaternion.Euler(-90,0,0)) as GameObject;
             newBut.transform.parent = go.transform;
             }
 

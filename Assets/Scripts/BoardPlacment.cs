@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BoardPlacment : MonoBehaviour
 {
+    public GameObject path;
     public GameObject Car;
     public GameObject ControllerLeft;
     public GameObject ControllerRight;
@@ -12,7 +13,7 @@ public class BoardPlacment : MonoBehaviour
     private Vector3 _headStartPoz;
     public int PowerOfMove = 5;
     public float BoxOffset = 0.9f;
-    public float carpozOffset = 0;
+    public float carpozOffset = -0.4f;
     bool ready = false;
     void Start()
     {
@@ -43,6 +44,7 @@ public class BoardPlacment : MonoBehaviour
     
     public void GetHeadPosition()
     {
+        path.transform.position = new Vector3(path.transform.position.x, _headStartPoz.y + carpozOffset, path.transform.position.y);
         _headStartPoz = Head.transform.position;
         ready = true;
 

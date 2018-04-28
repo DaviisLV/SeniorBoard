@@ -10,7 +10,7 @@ public class BoardPlacment : MonoBehaviour
     public GameObject ControllerLeft;
     public GameObject ControllerRight;
     public GameObject Head;
-
+    public GameObject Info;
     public Text GetReadyText;
 
 
@@ -52,6 +52,7 @@ public class BoardPlacment : MonoBehaviour
 
     public void GetHeadPosition()
     {
+        Info.SetActive(false);
         Car.SetActive(true);
       
         _headStartPoz = Head.transform.position;

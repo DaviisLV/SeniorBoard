@@ -53,10 +53,11 @@ public class BoardPlacment : MonoBehaviour
     public void GetHeadPosition()
     {
         Car.SetActive(true);
-        path.SetActive(true);
+      
         _headStartPoz = Head.transform.position;
         path.transform.position = new Vector3(path.transform.position.x, _headStartPoz.y + pathOffset, path.transform.position.z);
         StartCoroutine("getReady");
+        ready = true;
 
     }
     IEnumerator getReady()
@@ -68,8 +69,8 @@ public class BoardPlacment : MonoBehaviour
         GetReadyText.text = "1";
         yield return new WaitForSeconds(1);
         GetReadyText.text = "";
-      
-        ready = true;
+        path.SetActive(true);
+        
     }
 
 

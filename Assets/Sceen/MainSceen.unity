@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 478a9803c646a3045aca78e33662d681, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2dd711c5c77f5c14fbe000e72e24e8c4, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -2728,7 +2728,7 @@ MonoBehaviour:
   Roud: {fileID: 1343704833}
   PowerOfMove: 5
   BoxOffset: 0.9
-  carpozOffset: -0.4
+  carpozOffset: -0.41
   pathOffset: -1.7
 --- !u!4 &757479385
 Transform:

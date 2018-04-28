@@ -35,9 +35,7 @@ public class GenEditor : Editor
             for (int i = 0; i < go.path.Length; i++)
             {
                 GameObject newBut = Instantiate(go.ob, go.path[i], go.transform.rotation) as GameObject;
-                newBut.transform.parent = go.startPos;
-                newBut.transform.position = go.path[i];
-                Debug.Log(newBut.transform.position);
+            newBut.transform.parent = go.transform;
             }
 
         }

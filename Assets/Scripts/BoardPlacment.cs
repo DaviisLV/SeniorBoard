@@ -18,7 +18,7 @@ public class BoardPlacment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // SetBoardPosition();
+        SetBoardPosition();
     }
 
     private void FixedUpdate()

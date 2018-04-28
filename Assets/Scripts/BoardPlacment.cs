@@ -67,6 +67,7 @@ public class BoardPlacment : MonoBehaviour
         yield return new WaitForSeconds(1);
         GetReadyText.text = "1";
         yield return new WaitForSeconds(1);
+        GetReadyText.text = "";
       
         ready = true;
     }

@@ -14,6 +14,7 @@ public class GenereitObjects : MonoBehaviour {
         for (int i = 0; i < path.Length; i++)
         {
             path[i].y = startPos.position.y;
+            path[i].x = startPos.position.x;
         }
     }
     void Start () {

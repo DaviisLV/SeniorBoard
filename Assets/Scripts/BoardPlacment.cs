@@ -46,7 +46,7 @@ public class BoardPlacment : MonoBehaviour
     private void SetBoxPoz()
     {
 
-        Box.transform.position = new Vector3(Board.transform.position.x,_headStartPoz.y-BoxOffset, Board.transform.position.z+1);  
+        Box.transform.position = new Vector3(Board.transform.position.x,_headStartPoz.y-BoxOffset, Board.transform.position.z+0.4f);  
 
     }
     public void GetHeadPosition()

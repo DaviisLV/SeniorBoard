@@ -15,16 +15,14 @@ public class DropObjects : MonoBehaviour {
 
     void Start()
     {
-       
-        StartCoroutine("CreateObjects");
+
+        InvokeRepeating("CreateObjects", 2,2);
     }
 
-    IEnumerator CreateObjects()
+   public void CreateObjects()
     {
         GameObject newBut = Instantiate(ob, startPos.position, transform.rotation) as GameObject;
 
-        yield return new WaitForSeconds(5);
 
-        GameObject newBut2 = Instantiate(ob,startPos.position, transform.rotation) as GameObject;
     }
 }

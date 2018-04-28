@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Col
   - Coin
+  - line
   layers:
   - Default
   - TransparentFX

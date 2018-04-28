@@ -9,6 +9,8 @@ public class finish : MonoBehaviour {
   
         if (other.gameObject.tag == "Coin")
             Destroy(other.gameObject);
+        if (other.gameObject.tag == "line")
+            Destroy(other.gameObject);
 
 
     }

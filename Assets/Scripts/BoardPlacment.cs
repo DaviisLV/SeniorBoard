@@ -12,7 +12,8 @@ public class BoardPlacment : MonoBehaviour
     private Vector3 _headStartPoz;
     public int PowerOfMove = 5;
     public float BoxOffset = 0.9f;
-
+    public float carpozOffset = 0;
+    bool ready = false;
     void Start()
     {
 
@@ -22,6 +23,7 @@ public class BoardPlacment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ready)
         SetBoardPosition();
  
     }
@@ -33,7 +35,7 @@ public class BoardPlacment : MonoBehaviour
 
         float pozX = ControllerLeft.transform.position.x + (ControllerRight.transform.position.x - ControllerLeft.transform.position.x) / 2;
         float pozZ = ControllerLeft.transform.position.z + (ControllerRight.transform.position.z - ControllerLeft.transform.position.z) / 2;
-        float pozY = ControllerLeft.transform.position.y;
+        float pozY = _headStartPoz.y + carpozOffset;
 
         Car.transform.position = new Vector3(pozX*PowerOfMove, pozY, pozZ);
     }
@@ -42,6 +44,8 @@ public class BoardPlacment : MonoBehaviour
     public void GetHeadPosition()
     {
         _headStartPoz = Head.transform.position;
+        ready = true;
+
     }
   
 

@@ -11,6 +11,8 @@ public class BoardPlacment : MonoBehaviour
     public GameObject ControllerRight;
     public GameObject Head;
 
+    private Vector3 _headStartPoz;
+
     void Start()
     {
 
@@ -24,10 +26,8 @@ public class BoardPlacment : MonoBehaviour
         SetBoxPoz();
     }
 
-    private void FixedUpdate()
-    {
-        //   ShowControllerPoz();
-    }
+
+
 
     private void SetBoardPosition()
     {
@@ -42,13 +42,13 @@ public class BoardPlacment : MonoBehaviour
     private void SetBoxPoz()
     {
 
-        Box.transform.position = new Vector3(Board.transform.position.x+5, Board.transform.position.y, Board.transform.position.z);  
+        Box.transform.position = new Vector3(Board.transform.position.x, Board.transform.position.y, Board.transform.position.z+1);  
 
     }
-    private void ShowControllerPoz()
+    private void GetHeadPosition()
     {
-        Debug.Log("Right X = " + ControllerRight.transform.position.x + "Right Z = " + ControllerRight.transform.position.z);
-        Debug.Log("Left X = " + ControllerLeft.transform.position.x + "Left Z = " + ControllerLeft.transform.position.z);
+        _headStartPoz = Head.transform.position;
     }
+  
 
 }

@@ -14,6 +14,7 @@ public class BoardPlacment : MonoBehaviour
     private Vector3 _headStartPoz;
     public int PowerOfMove = 5;
     public float BoxOffset = 0.9f;
+
     void Start()
     {
 

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ShowHitCount : MonoBehaviour {
 
-  CheckCollisions CC = new CheckCollisions();
+public CheckCollisions cc;
     Text text;
     // Use this for initialization
     void Start()
@@ -17,6 +17,6 @@ public class ShowHitCount : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        text.text = CC.GetHitCount();
+        text.text = cc.GetHitCount();
     }
 }

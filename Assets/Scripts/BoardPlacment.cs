@@ -19,7 +19,12 @@ public class BoardPlacment : MonoBehaviour
 
     void Start()
     {
-        
+        float pozX = ControllerLeft.transform.position.x + (ControllerRight.transform.position.x - ControllerLeft.transform.position.x) / 2;
+        float pozZ = ControllerLeft.transform.position.z + (ControllerRight.transform.position.z - ControllerLeft.transform.position.z) / 2;
+        float pozY = ControllerLeft.transform.position.y;
+
+       lastPoz =  new Vector3(pozX, pozY, pozZ);
+       
     }
 
     // Update is called once per frame

@@ -43,7 +43,7 @@ public class BoardPlacment : MonoBehaviour
     private void SetBoardPosition()
     {
 
-        float pozX = ControllerLeft.transform.position.x + (ControllerRight.transform.position.x - ControllerLeft.transform.position.x) / 2;
+        float pozX = ControllerLeft.transform.position.x + BoxOffset+(ControllerRight.transform.position.x - ControllerLeft.transform.position.x) / 2;
         float pozZ = ControllerLeft.transform.position.z + (ControllerRight.transform.position.z - ControllerLeft.transform.position.z) / 2;
         float pozY = _headStartPoz.y + carpozOffset;
 

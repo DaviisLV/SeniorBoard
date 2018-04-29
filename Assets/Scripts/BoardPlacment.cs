@@ -55,7 +55,7 @@ public class BoardPlacment : MonoBehaviour
     {
         Info.SetActive(false);
         Car.SetActive(true);
-      
+          Roud.SetActive(true);
         _headStartPoz = Head.transform.position;
         path.transform.position = new Vector3(path.transform.position.x, _headStartPoz.y + pathOffset, path.transform.position.z);
         StartCoroutine("getReady");
@@ -72,7 +72,7 @@ public class BoardPlacment : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         GetReadyText.text = "";
         path.SetActive(true);
-        Roud.SetActive(true);
+    
         
     }
 

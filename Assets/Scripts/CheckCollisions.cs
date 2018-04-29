@@ -35,4 +35,8 @@ public class CheckCollisions : MonoBehaviour {
     {
         return "Punkti: "+_hitCount.ToString();
     }
+    public string cc()
+    {
+        return _hitCount.ToString();
+    }
 }
